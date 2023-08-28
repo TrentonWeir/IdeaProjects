@@ -8,28 +8,12 @@ fun main(args: Array<String>) {
 }
 
 fun lesson3() {
-    var student = Student(
-        "FirstName",
-        "LastName",
-        "streetAddress",
-        "City",
-        "State",
-        47227,
-        4.0,
-        "SDEV")
-
-    var teacher = Teacher(
-        "FirstName",
-        "LastName",
-        "streetAddress",
-        "City",
-        "State",
-        47227,
-        "Econ")
 
     println("Student Information:")
+    var student = CreateNewStudent()
     PrintProperties(student)
     println("Teacher Information:")
+    var teacher = CreateNewTeacher()
     PrintProperties(teacher)
 }
 
@@ -55,7 +39,7 @@ fun CreateNewTeacher():Teacher{
     print("Enter Teacher State (2 digits): ")
     val teacherState = input.nextLine()
 
-    print("Enter Teacher Zip (4 digits): ")
+    print("Enter Teacher Zip (5 digits): ")
     val teacherZip = input.nextInt()
     input.nextLine() // Consume the newline character
 
@@ -85,7 +69,7 @@ fun CreateNewStudent():Student{
     print("Enter Student State (2 digits): ")
     val state = input.nextLine()
 
-    print("Enter Student Zip (4 digits): ")
+    print("Enter Student Zip (5 digits): ")
     val zip = input.nextInt()
     input.nextLine() // Consume the newline character
 
